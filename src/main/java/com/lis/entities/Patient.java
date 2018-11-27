@@ -1,10 +1,20 @@
 package com.lis.entities;
 
-import javax.persistence.Entity;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
 
 /**
  * Created by nazir on 6/10/17.
  */
-
-public class Patient {
+@Entity
+@NoArgsConstructor
+public @Data class Patient {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String otherName;
 }
